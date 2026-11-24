@@ -383,8 +383,71 @@
 	.stat-row .sbar i.low{background:linear-gradient(90deg,#ff9b9b,#ef5b52)}
 	.stat-row .sbar em{position:absolute;left:0;right:0;top:0;font-style:normal;text-align:center;line-height:16px;font-size:12px;color:#083b56;font-weight:bold}
 	.stat-row .sc{width:104px;text-align:right;color:#4b7c96;font-size:.86em;white-space:nowrap}
+	/* ===== 60秒冲刺 + 连击 ===== */
+	.nb-btn.orange{border-color:#ffcf8f;background:#fff6e6;color:#b5651d}
+	.sprint-wrap{flex-direction:column;align-items:center;justify-content:center;gap:14px}
+	.sprint-head{text-align:center}
+	.sprint-combo{display:inline-block;font-size:clamp(22px,2.6vw,36px);font-weight:bold;color:#c2571f;background:#fff3d6;border:3px solid #ffc02e;border-radius:18px;padding:4px 22px;box-shadow:0 4px 0 #c99a00}
+	.sprint-combo.hot{background:linear-gradient(#ffe27a,#ffb02e);color:#7a3a00;animation:glowa 1s infinite}
+	.sprint-tip{font-size:clamp(16px,1.7vw,22px);color:#0a5c7e;margin-top:8px}
+	.sprint-opts{display:flex;flex-direction:column;gap:14px;width:min(780px,92vw)}
+	.sprint-opt{font-size:clamp(20px,2.3vw,30px);padding:14px 20px}
+	.sprint-zh{min-height:1.4em;font-size:clamp(17px,1.8vw,24px);color:#155a76;text-align:center;font-weight:bold}
+	.sprint-wrap .side{position:absolute;right:2vw;bottom:2vh;zoom:.7;pointer-events:none}
+	.sprint-big{font-size:clamp(44px,6vw,72px);font-weight:bold;color:#c2571f;margin:4px 0}
+	.sprint-stat{font-size:clamp(19px,2vw,26px);color:#0a5c7e;margin:3px 0}
+	/* ===== 冲刺时长选择 + 名字输入 ===== */
+	.sp-set-panel{max-width:min(680px,94vw);width:680px}
+	.sp-set-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+	.sp-dur{border:4px solid #7fd4ff;background:#eaf7ff;color:#0a5c7e;font-weight:bold;font-size:clamp(22px,2.4vw,32px);padding:16px 30px;border-radius:20px;cursor:pointer;box-shadow:0 5px 0 rgba(9,60,90,.16);transition:transform .1s}
+	.sp-dur:active{transform:translateY(3px)}
+	.sp-dur.on{background:linear-gradient(#ffe572,#ffc918);border-color:#c99a00;color:#5a3a00;box-shadow:0 5px 0 #c99a00}
+	.sp-dur small{display:block;font-size:.5em;font-weight:normal;margin-top:4px;opacity:.85}
+	.sp-name{display:flex;align-items:center;justify-content:center;gap:12px;margin:16px 0;font-size:clamp(18px,1.9vw,24px);color:#0a5c7e}
+	.sp-name input{border:3px solid #7fd4ff;border-radius:14px;padding:10px 18px;font-size:clamp(18px,1.9vw,24px);width:min(320px,60vw);text-align:center;color:#083b56;outline:none;background:#fff}
+	.sp-name input:focus{border-color:#ffc918;box-shadow:0 0 0 4px rgba(255,201,24,.35)}
+	.sp-saved{color:#1d8f47;font-weight:bold;font-size:clamp(17px,1.8vw,23px);margin:8px 0}
+	/* v12：结算页字号收敛 + 名单/排行榜 */
+	.sp-res h2{font-size:clamp(20px,2.4vw,30px)}
+	.sp-res .intro-ico{font-size:clamp(28px,3.4vw,42px)}
+	.sp-res .sprint-big{font-size:clamp(30px,3.6vw,46px);margin:2px 0}
+	.sp-res .sprint-stat{font-size:clamp(14px,1.5vw,18px)}
+	.sp-res .sp-name{font-size:clamp(15px,1.5vw,19px);margin:10px 0}
+	.sp-res .sp-name input{font-size:clamp(15px,1.5vw,19px);padding:7px 12px;width:min(230px,56vw);border-width:2px;border-radius:10px}
+	.sp-res .sp-saved{font-size:clamp(13px,1.4vw,17px)}
+	.sp-res .row .btn{font-size:clamp(15px,1.7vw,20px);padding:10px 18px}
+	.ro-ta{display:block;width:min(520px,86vw);height:120px;margin:6px auto;border:2px solid #7fd4ff;border-radius:12px;padding:8px 10px;font-size:clamp(14px,1.5vw,18px);color:#083b56;resize:none;font-family:inherit;outline:none;background:#fff}
+	.ro-ta:focus{border-color:#ffc918;box-shadow:0 0 0 3px rgba(255,201,24,.3)}
+	.roster{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;max-height:30vh;overflow:auto;margin:10px auto 4px;padding:8px;background:#f2fbff;border:2px solid #bfe6ff;border-radius:14px;width:min(520px,86vw)}
+	.rchip{border:2px solid #7fd4ff;background:#fff;color:#0a5c7e;font-weight:bold;font-size:clamp(13px,1.4vw,17px);padding:5px 12px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:transform .08s;font-family:inherit}
+	.rchip:active{transform:scale(.94)}
+	.rchip.on{background:linear-gradient(#ffe572,#ffc918);border-color:#c99a00;color:#5a3a00}
+	.rchip .rx{color:#d0483b;font-weight:bold;font-size:.9em;padding:0 2px}
+	.rchip .rx:hover{text-shadow:0 0 5px #ffb3ab}
+	.bd-list{max-height:46vh;overflow:auto;margin:10px auto;width:min(520px,86vw);background:#f2fbff;border:2px solid #bfe6ff;border-radius:14px;padding:8px 10px;text-align:left}
+	.bd-row{display:flex;align-items:center;gap:10px;padding:6px 4px;border-bottom:1px dashed #bfe6ff}
+	.bd-row:last-child{border-bottom:none}
+	.bd-rank{width:34px;text-align:center;font-weight:bold;color:#c2571f;font-size:clamp(14px,1.5vw,18px);flex:none}
+	.bd-name{font-weight:bold;color:#083b56;font-size:clamp(14px,1.6vw,19px);flex:none;max-width:9em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+	.bd-meta{color:#0a5c7e;font-size:clamp(12px,1.3vw,16px);margin-left:auto;text-align:right}
+	.sp-tools{margin-top:4px}
+	.trans-prompt{background:#fff;border:3px solid #7fd4ff;border-radius:16px;padding:14px 20px;font-size:clamp(18px,2.1vw,27px);color:#083b56;width:min(640px,88vw);margin:0 auto;line-height:1.55;text-align:center;box-shadow:0 4px 0 rgba(9,60,90,.12)}
+	.trans-prompt.read{cursor:pointer}
+	.trans-prompt.read:active{transform:scale(.99)}
+	.trans-opt{white-space:normal;line-height:1.4;padding:10px 14px}
+	.trans-big{font-size:clamp(30px,3.6vw,46px);font-weight:bold;color:#c2571f;margin:4px 0}
+	.sprint-tip{color:#d6efff;text-shadow:0 1px 2px rgba(3,34,53,.5)}
 	</style>
-	</head>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "https://hm.baidu.com/hm.js?9bc6273fb55875d9d879d07af7907383";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
 	<body>
 	<div class="stage">
 	  <div class="deco" id="deco"></div>
@@ -394,6 +457,7 @@
 	      <button class="ibtn" id="btn-lang" title="切换语言">EN</button>
 	      <button class="ibtn" id="btn-sound" title="声音开关">🔊</button>
       <button class="ibtn assist" id="btn-zh" title="答对后显示中文意思">📖</button>
+      <button class="ibtn" id="btn-board" title="冲刺排行榜">🏆</button>
       <button class="ibtn assist" id="btn-read" title="答对后自动朗读英文">🗣️</button>
 	    </div>
 	    <div class="hud-c">
@@ -5861,6 +5925,8 @@ function syncAssist(){
 	        <button class="nb-btn red" id="btn-wrong-only">📕 只练错题（${NB.wrong.length} 句）</button>
 	        <button class="btn btn-green btn-big" id="btn-adv">🏆 ${t('adventure')}</button>
 	        <button class="nb-btn" id="btn-stat">📊 正确率</button>
+	        <button class="nb-btn orange" id="btn-sprint">⚡ 限时冲刺</button>
+	        <button class="nb-btn" id="btn-trans">🔤 中英互译</button>
 	      </div>
 	    </div>`;
 	  document.querySelectorAll('.lvcard').forEach(c=>{
@@ -5874,6 +5940,8 @@ function syncAssist(){
 	  };
 	  document.getElementById('btn-adv').onclick=()=>{S.wrongOnly=false;startLevel(1,true);};
 	  document.getElementById('btn-stat').onclick=()=>{sClick();openStat();};
+	  document.getElementById('btn-sprint').onclick=()=>{sClick();sprintSetup();};
+  document.getElementById('btn-trans').onclick=()=>{sClick();trSetup();};
 	  document.getElementById('btn-scope').onclick=()=>{sClick();openScope();};
 	  const bbh=document.getElementById('btn-back-home');if(bbh)bbh.onclick=()=>{sClick();showStart();};
 	  updateHUD();
@@ -6418,6 +6486,360 @@ function syncAssist(){
 	  document.getElementById('ov-again').onclick=()=>startLevel(1,true);
 	  document.getElementById('ov-map').onclick=showSelect;
 	}
+/* ═══════════ 限时冲刺（30/60秒） + 连击 ═══════════ */
+
+/* 冲刺开局设置：选 30/60 秒（29人一节课轮番挑战，30秒更从容） */
+function sprintSetup(){
+  S.reOv=sprintSetup;
+  openOverlay('<div class="panel sp-set-panel"><div class="intro-ico">⚡</div>'+
+    '<h2>'+(S.lang==='zh'?'限时冲刺':'Time Sprint')+'</h2>'+
+    '<p class="note">'+(S.lang==='zh'?'选一个时长，60秒挑战极限，30秒适合全班轮番上场～':'Pick a duration. 60s for a challenge, 30s fits a whole class rotation.')+'</p>'+
+    '<div class="sp-set-row">'+
+      '<button class="sp-dur'+(SPR_DUR===30?' on':'')+'" data-sec="30">30 秒<small>'+(S.lang==='zh'?'全班轮战':'class rotation')+'</small></button>'+
+      '<button class="sp-dur'+(SPR_DUR===60?' on':'')+'" data-sec="60">60 秒<small>'+(S.lang==='zh'?'极限挑战':'max challenge')+'</small></button>'+
+    '</div>'+
+    '<div class="row sp-tools"><button class="nb-btn" id="sp-roster">📋 '+(S.lang==='zh'?'班级名单':'Roster')+'（'+roster().length+'）</button>'+
+    '<button class="nb-btn" id="sp-board">🏆 '+(S.lang==='zh'?'排行榜':'Board')+'</button></div>'+
+    '<div class="row"><button class="btn btn-green btn-big" id="sp-go">'+(S.lang==='zh'?'开始冲刺':'Start')+'</button>'+
+    '<button class="btn btn-blue btn-big" id="sp-cancel">'+(S.lang==='zh'?'返回':'Back')+'</button></div></div>');
+  let sel=SPR_DUR;
+  document.querySelectorAll('.sp-dur').forEach(b=>b.onclick=()=>{
+    sel=+b.dataset.sec;
+    document.querySelectorAll('.sp-dur').forEach(x=>x.classList.toggle('on',x===b));
+  });
+  document.getElementById('sp-go').onclick=()=>sprintStart(sel);
+  document.getElementById('sp-cancel').onclick=showSelect;
+  document.getElementById('sp-roster').onclick=()=>openRoster('setup');
+  document.getElementById('sp-board').onclick=()=>openBoard('setup');
+}
+
+const SPR_KEY='sbSprintBestV1';
+const SPR_BOARD='sbSprintBoardV1';
+let SPR_DUR=60;  /* 上次选择的时长：30 或 60 */
+let SPR={active:false,lock:false,q:[],meta:[],idx:0,score:0,combo:0,maxCombo:0,right:0,wrong:0,dur:60,name:""};
+function sprintBest(){try{return +localStorage.getItem(SPR_KEY)||0;}catch(e){return 0;}}
+function sprintRefill(){
+  const pool=scopePool().length?scopePool():(bookPool().length?bookPool():CORPUS);
+  const picked=shuffle(pool).slice(0,40);
+  SPR.q=picked.map(r=>{const o=makeChoices(r[0]),right=o[0],s=shuffle(o);return{opts:s,ci:s.indexOf(right)};});
+  SPR.meta=picked.map(r=>({en:r[0],zh:r[1]}));
+  SPR.idx=0;
+}
+function sprintStart(sec){
+  SPR.dur=(sec===30||sec===60)?sec:SPR.dur;
+  SPR_DUR=SPR.dur;
+  sprintRefill();
+  SPR.score=0;SPR.combo=0;SPR.maxCombo=0;SPR.right=0;SPR.wrong=0;SPR.lock=false;SPR.active=true;
+  S.level=0;S.score=0;
+  stopTimer();closeOverlay();hideMeaning();
+  sprintRender();
+  startTimer(SPR.dur,sprintEnd);
+}
+function sprintRender(){
+  S.redraw=sprintRender;
+  document.getElementById('lvltag').textContent='⚡ '+SPR.dur+'秒冲刺';
+  document.getElementById('qinfo').textContent='🔥 连击 x'+SPR.combo;
+  document.getElementById('score').textContent='⭐ '+SPR.score;
+  document.getElementById('pfill').style.width=(SPR.idx/Math.max(1,SPR.q.length)*100)+'%';
+  const cur=SPR.q[SPR.idx];if(!cur)return;
+  const zh=document.getElementById('sprint-zh');
+  document.getElementById('screen').innerHTML=
+    '<div class="gwrap sprint-wrap">'+
+      '<div class="sprint-head"><div class="sprint-combo'+(SPR.combo>=3?' hot':'')+'">🔥 连击 x'+SPR.combo+'</div>'+
+      '<div class="sprint-tip">'+(S.lang==='zh'?'选出排序正确的句子，连对越多得分越高！':'Pick the correct sentence. Longer streaks = more points!')+'</div></div>'+
+      '<div class="sprint-opts">'+cur.opts.map((o,i)=>'<button class="opt sprint-opt" data-i="'+i+'">'+o+'</button>').join('')+'</div>'+
+      '<div class="sprint-zh" id="sprint-zh"></div>'+
+      '<div class="side">'+bobHTML('')+'</div>'+
+    '</div>';
+  document.querySelectorAll('.sprint-opt').forEach(b=>b.onclick=()=>judgeSprint(+b.dataset.i));
+}
+function judgeSprint(i){
+  if(!SPR.active||SPR.lock)return;
+  SPR.lock=true;
+  const cur=SPR.q[SPR.idx],ok=i===cur.ci,btn=document.querySelector('.sprint-opt[data-i="'+i+'"]');
+  document.querySelectorAll('.sprint-opt').forEach(b=>b.onclick=null);
+  if(ok){
+    SPR.combo++;if(SPR.combo>SPR.maxCombo)SPR.maxCombo=SPR.combo;
+    const gain=10+Math.min(SPR.combo-1,9)*5;
+    SPR.score+=gain;SPR.right++;
+    sCorrect();if(btn)btn.classList.add('good');
+    popText('+'+gain,'good top2');
+    const zh=document.getElementById('sprint-zh');if(zh)zh.textContent=SPR.meta[SPR.idx].zh;
+    document.getElementById('score').textContent='⭐ '+SPR.score;
+    document.getElementById('qinfo').textContent='🔥 连击 x'+SPR.combo;
+    setTimeout(sprintNext,650);
+  }else{
+    SPR.combo=0;SPR.wrong++;
+    sZap();if(btn)btn.classList.add('bad');
+    const rb=document.querySelector('.sprint-opt[data-i="'+cur.ci+'"]');if(rb)rb.classList.add('good');
+    const zh=document.getElementById('sprint-zh');if(zh)zh.textContent='✅ '+SPR.meta[SPR.idx].en;
+    document.getElementById('qinfo').textContent='🔥 连击 x0';
+    setTimeout(sprintNext,1100);
+  }
+}
+function sprintNext(){
+  if(!SPR.active)return;
+  SPR.idx++;
+  if(SPR.idx>=SPR.q.length)sprintRefill();
+  SPR.lock=false;
+  sprintRender();
+}
+function sprintShowResult(isNew){
+  const total=SPR.right+SPR.wrong,acc=total?Math.round(SPR.right/total*100):0;
+  S.reOv=()=>sprintShowResult(isNew);SPR.lastNew=isNew;
+  openOverlay('<div class="panel sp-res"><div class="intro-ico">⚡</div>'+
+    '<h2>'+SPR.dur+(S.lang==='zh'?'秒冲刺结束！':'s Sprint Over!')+'</h2>'+
+    '<div class="sprint-big">⭐ '+SPR.score+'</div>'+
+    (isNew?'<div class="pkres">🏆 '+(S.lang==='zh'?'新纪录！':'New Record!')+'</div>':'')+
+    '<div class="sprint-stat">'+(S.lang==='zh'?'答对':'Correct')+': '+SPR.right+' / '+total+' · '+(S.lang==='zh'?'正确率':'Accuracy')+' '+acc+'%</div>'+
+    '<div class="sprint-stat">🔥 '+(S.lang==='zh'?'最高连击':'Best Streak')+': x'+SPR.maxCombo+' · '+(S.lang==='zh'?'历史最高':'Best Score')+': '+sprintBest()+'</div>'+
+    '<div class="sp-name"><span>'+(S.lang==='zh'?'我的名字：':'Name:')+'</span>'+
+      '<input id="sp-name-input" type="text" maxlength="12" placeholder="'+(S.lang==='zh'?'输入名字记成绩':'Your name')+'" value="'+(SPR.name||'')+'"></div>'+
+    '<div class="roster" id="sp-roster">'+roster().map(n=>'<button class="rchip'+(SPR.name===n?' on':'')+""+'" data-nm="'+esc(n)+'">'+esc(n)+'</button>').join('')+'</div>'+
+    '<div id="sp-saved-box"></div>'+
+    '<div class="row"><button class="btn btn-green btn-big" id="sp-save">'+(S.lang==='zh'?'💾 保存成绩':'💾 Save')+'</button>'+
+    '<button class="btn btn-yellow btn-big" id="sp-board2">🏆 '+(S.lang==='zh'?'排行榜':'Board')+'</button>'+
+    '<button class="btn btn-yellow btn-big" id="sp-again">'+(S.lang==='zh'?'再来一次':'Play Again')+'</button>'+
+    '<button class="btn btn-blue btn-big" id="sp-map">'+(S.lang==='zh'?'返回选关':'Level Map')+'</button></div></div>');
+  const sv=document.getElementById('sp-save');
+  sv.onclick=()=>{
+    const inp=document.getElementById('sp-name-input'),nm=(inp&&inp.value||'').trim();
+    if(!nm){toast(S.lang==='zh'?'先写上名字哦～':'Please enter a name');if(inp)inp.focus();return;}
+    SPR.name=nm;
+    const total=SPR.right+SPR.wrong,acc=total?Math.round(SPR.right/total*100):0;
+    let board=[];try{board=JSON.parse(localStorage.getItem(SPR_BOARD))||[];}catch(e){}
+    board.push({name:nm,score:SPR.score,acc,combo:SPR.maxCombo,dur:SPR.dur,right:SPR.right,total,time:Date.now()});
+    try{localStorage.setItem(SPR_BOARD,JSON.stringify(board));}catch(e){}
+    sv.disabled=true;sv.textContent='✅ '+(S.lang==='zh'?'已保存':'Saved');
+    const box=document.getElementById('sp-saved-box');
+    if(box)box.innerHTML='<div class="sp-saved">🎉 '+nm+'，成绩记下啦！</div>';
+  };
+  const ni=document.getElementById('sp-name-input');
+  if(ni)ni.onkeydown=e=>{if(e.key==='Enter')sv.click();};
+  document.getElementById('sp-board2').onclick=()=>openBoard('result');
+  document.querySelectorAll('#sp-roster .rchip').forEach(c=>c.onclick=()=>{
+    SPR.name=c.dataset.nm;
+    const inp=document.getElementById('sp-name-input');if(inp)inp.value=SPR.name;
+    document.querySelectorAll('#sp-roster .rchip').forEach(x=>x.classList.toggle('on',x===c));
+  });
+  document.getElementById('sp-again').onclick=()=>{sprintStart(SPR.dur);};
+  document.getElementById('sp-map').onclick=showSelect;
+}
+function sprintEnd(){
+  if(!SPR.active)return;
+  SPR.active=false;stopTimer();hideMeaning();
+  const prev=sprintBest(),isNew=SPR.score>prev;
+  if(isNew)try{localStorage.setItem(SPR_KEY,String(SPR.score));}catch(e){}
+  sWin();confetti(70);
+  sprintShowResult(isNew);
+}
+	/* ═══════════ v12 班级名单 + 排行榜 ═══════════ */
+	const ROSTER_KEY='sbRosterV1';
+	let BOARD_BACK='hud',ROSTER_BACK='setup';
+	function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+	function defaultRoster(){const a=[];for(let i=1;i<=29;i++)a.push(i+'号');return a;}
+	function roster(){try{const r=JSON.parse(localStorage.getItem(ROSTER_KEY));if(Array.isArray(r)&&r.length)return r;}catch(e){}return defaultRoster();}
+	function saveRoster(r){try{localStorage.setItem(ROSTER_KEY,JSON.stringify(r));}catch(e){}}
+	function openRoster(back){
+	  if(back)ROSTER_BACK=back;
+	  S.reOv=()=>openRoster();
+	  const list=roster();
+	  openOverlay('<div class="panel sp-res"><div class="intro-ico">📋</div>'+
+	    '<h2>'+(S.lang==='zh'?'班级名单':'Class Roster')+'（'+list.length+'人）</h2>'+
+	    '<div class="roster" id="ro-chips">'+list.map((n,i)=>'<span class="rchip">'+esc(n)+'<span class="rx" data-i="'+i+'" title="删除">✕</span></span>').join('')+'</div>'+
+	    '<div class="sp-name"><input id="ro-add" type="text" maxlength="12" placeholder="'+(S.lang==='zh'?'输入名字后点添加':'New name')+'"><button class="btn btn-green" id="ro-addbtn">'+(S.lang==='zh'?'➕ 添加':'Add')+'</button></div>'+
+	    '<div class="row"><button class="nb-btn" id="ro-batch">📥 '+(S.lang==='zh'?'批量添加':'Bulk Add')+'</button>'+
+	    '<button class="nb-btn" id="ro-reset">'+(S.lang==='zh'?'🔄 恢复默认名单':'Reset')+'</button>'+
+	    '<button class="btn btn-blue btn-big" id="ro-back">'+(S.lang==='zh'?'返回':'Back')+'</button></div></div>');
+	  document.querySelectorAll('#ro-chips .rx').forEach(x=>x.onclick=e=>{
+	    e.stopPropagation();
+	    const r=roster();r.splice(+x.dataset.i,1);saveRoster(r);openRoster();
+	  });
+	  document.getElementById('ro-addbtn').onclick=()=>{
+	    const inp=document.getElementById('ro-add'),nm=(inp.value||'').trim();
+	    if(!nm){toast(S.lang==='zh'?'先写个名字哦～':'Enter a name');return;}
+	    const r=roster();
+	    if(r.indexOf(nm)>=0){toast(S.lang==='zh'?'名单里已经有「'+nm+'」啦':'Already in roster');return;}
+	    if(r.length>=60){toast(S.lang==='zh'?'名单最多 60 人啦':'Roster full (60)');return;}
+	    r.push(nm);saveRoster(r);openRoster();
+	  };
+	  document.getElementById('ro-add').onkeydown=e=>{if(e.key==='Enter')document.getElementById('ro-addbtn').click();};
+	  document.getElementById('ro-reset').onclick=()=>{saveRoster(defaultRoster());openRoster();};
+	  document.getElementById('ro-batch').onclick=()=>openRosterBatch();
+	  document.getElementById('ro-back').onclick=()=>{if(ROSTER_BACK==='board')openBoard();else sprintSetup();};
+	}
+	function openBoard(back){
+	  if(back)BOARD_BACK=back;
+	  S.reOv=openBoard;
+	  let board=[];try{board=JSON.parse(localStorage.getItem(SPR_BOARD))||[];}catch(e){}
+	  board.sort((a,b)=>b.score-a.score);
+	  const rows=board.length?board.map((r,i)=>{
+	    const d=new Date(r.time||Date.now()),md=(d.getMonth()+1)+'月'+d.getDate()+'日';
+	    const medal=i<3?['🥇','🥈','🥉'][i]:(i+1);
+	    return '<div class="bd-row"><span class="bd-rank">'+medal+'</span><span class="bd-name">'+esc(r.name||'?')+'</span><span class="bd-meta">⭐'+r.score+' · 🔥x'+(r.combo||0)+' · '+(r.acc||0)+'% · '+(r.dur||60)+'秒 · '+md+'</span></div>';
+	  }).join(''):'<p class="note">'+(S.lang==='zh'?'还没有成绩，快冲刺一局吧！':'No records yet!')+'</p>';
+	  openOverlay('<div class="panel sp-res"><div class="intro-ico">🏆</div>'+
+	    '<h2>'+(S.lang==='zh'?'冲刺排行榜':'Sprint Leaderboard')+'</h2>'+
+	    '<div class="bd-list">'+rows+'</div>'+
+	    '<div class="row"><button class="nb-btn red" id="bd-clear">'+(S.lang==='zh'?'🗑 清空成绩':'Clear')+'</button>'+
+	    '<button class="nb-btn" id="bd-roster">'+(S.lang==='zh'?'📋 班级名单':'Roster')+'</button>'+
+	    '<button class="btn btn-blue btn-big" id="bd-back">'+(S.lang==='zh'?'返回':'Back')+'</button></div></div>');
+	  const bc=document.getElementById('bd-clear');
+	  bc.onclick=()=>{
+	    if(bc.dataset.arm){try{localStorage.removeItem(SPR_BOARD);}catch(e){}openBoard();}
+	    else{bc.dataset.arm='1';bc.textContent='⚠️ '+(S.lang==='zh'?'再点一次确认清空':'Tap again to confirm');}
+	  };
+	  document.getElementById('bd-roster').onclick=()=>openRoster('board');
+	  document.getElementById('bd-back').onclick=()=>{
+	    if(BOARD_BACK==='setup')sprintSetup();
+	    else if(BOARD_BACK==='result')sprintShowResult(SPR.lastNew);
+	    else closeOverlay();
+	  };
+	}
+	function openRosterBatch(){
+	  S.reOv=openRosterBatch;
+	  openOverlay('<div class="panel sp-res"><div class="intro-ico">📥</div>'+
+	    '<h2>'+(S.lang==='zh'?'批量添加名单':'Bulk Add')+'</h2>'+
+	    '<p class="note">'+(S.lang==='zh'?'一行一个名字，用逗号、顿号隔开也行；重复的会自动跳过。':'One name per line, or separated by commas.')+'</p>'+
+	    '<textarea class="ro-ta" id="ro-batch-ta" placeholder="'+(S.lang==='zh'?'例如：\n张三\n李四\n王五':'e.g.\nTom\nJerry')+'"></textarea>'+
+	    '<div class="row"><button class="btn btn-green btn-big" id="ro-batch-go">'+(S.lang==='zh'?'✅ 添加':'Add')+'</button>'+
+	    '<button class="btn btn-blue btn-big" id="ro-batch-back">'+(S.lang==='zh'?'返回':'Back')+'</button></div></div>');
+	  document.getElementById('ro-batch-go').onclick=()=>{
+	    const t=document.getElementById('ro-batch-ta').value||'';
+	    const names=t.split(/[\n\r,，、;；\t]+/).map(s=>s.trim()).filter(Boolean);
+	    if(!names.length){toast(S.lang==='zh'?'先粘贴或输入名字哦～':'Paste names first');return;}
+	    const cur=roster();const add=[];let dup=0,full=0;
+	    for(const n of names){
+	      if(cur.indexOf(n)>=0||add.indexOf(n)>=0){dup++;continue;}
+	      if(cur.length+add.length>=60){full++;continue;}
+	      add.push(n);
+	    }
+	    if(add.length){saveRoster(cur.concat(add));toast('✅ '+(S.lang==='zh'?'添加 '+add.length+' 人':'Added '+add.length)+(dup?(S.lang==='zh'?'，跳过重复 '+dup+' 个':''):'')+(full?(S.lang==='zh'?'，超出上限放弃 '+full+' 个':''):''));}
+	    else toast(dup?(S.lang==='zh'?'全都是重复的名字哦':'All duplicates'):(S.lang==='zh'?'没有可添加的名字':'Nothing to add'));
+	    openRoster();
+	  };
+	  document.getElementById('ro-batch-back').onclick=openRoster;
+	}
+	/* ═══════════ v14 中英互译小测 ═══════════ */
+	let TR={active:false,lock:false,mode:'en2zh',qi:0,total:10,right:0,wrong:0,q:[],meta:[]};
+	function trSetup(){
+	  S.reOv=trSetup;
+	  openOverlay('<div class="panel sp-set-panel"><div class="intro-ico">🔤</div>'+
+	    '<h2>'+(S.lang==='zh'?'中英互译小测':'Translation Quiz')+'</h2>'+
+	    '<p class="note">'+(S.lang==='zh'?'每轮 10 题，按当前范围出题；答错的自动收进错题本～':'10 questions per round. Wrong ones go to the notebook.')+'</p>'+
+	    '<div class="sp-set-row">'+
+	      '<button class="sp-dur" id="tr-en2zh">看英文 🇬🇧<small>'+(S.lang==='zh'?'选出中文意思':'EN → CN')+'</small></button>'+
+	      '<button class="sp-dur" id="tr-zh2en">看中文 🇨🇳<small>'+(S.lang==='zh'?'选出英文句子':'CN → EN')+'</small></button>'+
+	    '</div>'+
+	    '<div class="row"><button class="btn btn-blue btn-big" id="tr-cancel">'+(S.lang==='zh'?'返回':'Back')+'</button></div></div>');
+	  document.getElementById('tr-en2zh').onclick=()=>trStart('en2zh');
+	  document.getElementById('tr-zh2en').onclick=()=>trStart('zh2en');
+	  document.getElementById('tr-cancel').onclick=showSelect;
+	}
+	function trPool(){const p=scopePool();return p.length>=6?p:CORPUS;}
+	function trBuild(){
+	  const pool=trPool(),rows=shuffle(pool).slice(0,TR.total);
+	  TR.meta=rows.map(r=>({en:r[0],zh:r[1],b:r[2],u:r[3]}));
+	  TR.q=rows.map(r=>{
+	    const isE=TR.mode==='en2zh';
+	    const right=isE?r[1]:r[0];
+	    const all=[...new Set(pool.map(x=>isE?x[1]:x[0]).filter(v=>v&&v!==right))];
+	    const ds=shuffle(all).slice(0,2);
+	    const opts=shuffle([right].concat(ds));
+	    return {opts,ci:opts.indexOf(right)};
+	  });
+	}
+	function trStart(mode){
+	  TR.mode=mode;TR.active=true;TR.lock=false;TR.qi=0;TR.right=0;TR.wrong=0;
+	  S.level=0;S.score=0;
+	  stopTimer();closeOverlay();hideMeaning();
+	  trBuild();trRender();
+	}
+	function trRender(){
+	  S.redraw=trRender;
+	  document.getElementById('lvltag').textContent='🔤 中英互译';
+	  document.getElementById('qinfo').textContent=(TR.qi+1)+' / '+TR.total+' 题';
+	  document.getElementById('score').textContent='⭐ '+(TR.right*10);
+	  document.getElementById('pfill').style.width=(TR.qi/TR.total*100)+'%';
+	  const m=TR.meta[TR.qi];if(!m)return;
+	  const prompt=TR.mode==='en2zh'?m.en:m.zh;
+	  const cur=TR.q[TR.qi];
+	  document.getElementById('screen').innerHTML=
+	    '<div class="gwrap sprint-wrap">'+
+	      '<div class="sprint-head"><div class="sprint-tip">'+(S.lang==='zh'?(TR.mode==='en2zh'?'这句话是什么意思？（点句子可再听一遍）':'哪句是它的英文？'):'Choose the right one!')+'</div></div>'+
+	      '<div class="trans-prompt'+(TR.mode==='en2zh'?' read':'')+'"'+(TR.mode==='en2zh'?' id="tr-prompt"':'')+'>'+esc(prompt)+'</div>'+
+	      '<div class="sprint-opts">'+cur.opts.map((o,i)=>'<button class="opt sprint-opt trans-opt" data-i="'+i+'">'+esc(o)+'</button>').join('')+'</div>'+
+	      '<div class="sprint-zh" id="trans-zh"></div>'+
+	      '<div class="side">'+bobHTML('')+'</div>'+
+	    '</div>';
+	  document.querySelectorAll('.trans-opt').forEach(b=>b.onclick=()=>judgeTrans(+b.dataset.i));
+	  const pr=document.getElementById('tr-prompt');
+	  if(pr&&S.sound&&window.speechSynthesis){
+	    if(S.autoRead){const u=new SpeechSynthesisUtterance(m.en);speechSynthesis.speak(u);}
+	    pr.onclick=()=>{const u=new SpeechSynthesisUtterance(m.en);speechSynthesis.speak(u);};
+	  }
+	}
+	function judgeTrans(i){
+	  if(!TR.active||TR.lock)return;
+	  TR.lock=true;
+	  const cur=TR.q[TR.qi],m=TR.meta[TR.qi],ok=i===cur.ci;
+	  const btn=document.querySelector('.trans-opt[data-i="'+i+'"]');
+	  document.querySelectorAll('.trans-opt').forEach(b=>b.onclick=null);
+	  const zh=document.getElementById('trans-zh');
+	  if(ok){
+	    TR.right++;sCorrect();
+	    if(btn)btn.classList.add('good');
+	    trStat(true,m);
+	    if(zh)zh.textContent=TR.mode==='en2zh'?m.zh:(S.lang==='zh'?'✅ 答对啦！':'✅ Correct!');
+	    document.getElementById('score').textContent='⭐ '+(TR.right*10);
+	    setTimeout(trNext,750);
+	  }else{
+	    TR.wrong++;sZap();
+	    if(btn)btn.classList.add('bad');
+	    const rb=document.querySelector('.trans-opt[data-i="'+cur.ci+'"]');if(rb)rb.classList.add('good');
+	    trStat(false,m);trWrong(m);
+	    if(zh)zh.textContent='✅ '+(TR.mode==='en2zh'?m.zh:m.en);
+	    setTimeout(trNext,1250);
+	  }
+	}
+	function trNext(){
+	  if(!TR.active)return;
+	  TR.qi++;TR.lock=false;
+	  if(TR.qi>=TR.total)trEnd();else trRender();
+	}
+	function trEnd(){
+	  TR.active=false;stopTimer();
+	  sWin();confetti(TR.right>=8?90:50);
+	  trShowResult();
+	}
+	function trShowResult(){
+	  S.reOv=trShowResult;
+	  openOverlay('<div class="panel sp-res"><div class="intro-ico">🔤</div>'+
+	    '<h2>'+(S.lang==='zh'?'互译小测结束！':'Quiz Over!')+'</h2>'+
+	    '<div class="trans-big">⭐ '+(TR.right*10)+'</div>'+
+	    '<div class="sprint-stat">'+(S.lang==='zh'?'答对':'Correct')+': '+TR.right+' / '+TR.total+' · '+(S.lang==='zh'?'正确率':'Accuracy')+' '+Math.round(TR.right/TR.total*100)+'%</div>'+
+	    (TR.wrong?'<div class="sprint-stat">📕 '+(S.lang==='zh'?'错题已收进错题本，「只练错题」可以再战':'Wrong ones saved to notebook')+'</div>':'')+
+	    '<div class="row"><button class="btn btn-green btn-big" id="tr-again">'+(S.lang==='zh'?'再来一轮':'Play Again')+'</button>'+
+	    '<button class="btn btn-yellow btn-big" id="tr-setup2">'+(S.lang==='zh'?'换个方向':'Switch Mode')+'</button>'+
+	    '<button class="btn btn-blue btn-big" id="tr-map">'+(S.lang==='zh'?'返回选关':'Level Map')+'</button></div></div>');
+	  document.getElementById('tr-again').onclick=()=>trStart(TR.mode);
+	  document.getElementById('tr-setup2').onclick=trSetup;
+	  document.getElementById('tr-map').onclick=showSelect;
+	}
+	function trStat(ok,m){
+	  if(!m||!m.en)return;
+	  const hits=CORPUS.filter(r=>r[0]===m.en);
+	  if(!hits[0])return;
+	  const k=hits[0][2]+'|'+hits[0][3],o=USTAT[k]||(USTAT[k]={right:0,wrong:0});
+	  if(ok)o.right++;else o.wrong++;
+	  saveStat();
+	}
+	function trWrong(m){
+	  if(!m||!m.en)return;
+	  if(NB.wrong.some(x=>x.en===m.en))return;
+	  if(NB.mastered.some(x=>x.en===m.en))return;
+	  NB.wrong.push({en:m.en,zh:m.zh,b:m.b,u:m.u});saveNB();
+	}
 	/* ===== 初始化 ===== */
 	function init(){
 	  load();loadNB();
@@ -6425,7 +6847,7 @@ function syncAssist(){
 	  const bl=document.getElementById('btn-lang');
 	  bl.textContent=S.lang==='zh'?'EN':'中';
 	  document.getElementById('btn-sound').textContent=S.sound?'🔊':'🔇';
-	  document.getElementById('btn-home').onclick=()=>{sClick();if(S.level>0)showSelect();else showStart();};
+	  document.getElementById('btn-home').onclick=()=>{sClick();if(SPR.active){SPR.active=false;stopTimer();showSelect();return;}if(TR.active){TR.active=false;stopTimer();showSelect();return;}if(S.level>0)showSelect();else showStart();};
 	  const ph=document.getElementById('pine-home');if(ph)ph.onclick=()=>{sClick();openScope();};
 	  document.getElementById('btn-lang').onclick=()=>{
 	    S.lang=S.lang==='zh'?'en':'zh';
@@ -6441,6 +6863,7 @@ function syncAssist(){
 	  };
 	  loadAssist();syncAssist();
 	  document.getElementById('btn-zh').onclick=()=>{S.showZh=!S.showZh;saveAssist();syncAssist();if(!S.showZh)hideMeaning();};
+  document.getElementById('btn-board').onclick=()=>{sClick();if(SPR.active){toast('冲刺结束后再看榜单哦～');return;}openBoard('hud');};
 	  document.getElementById('btn-read').onclick=()=>{S.autoRead=!S.autoRead;saveAssist();syncAssist();if(!S.autoRead){try{if(window.speechSynthesis)speechSynthesis.cancel();}catch(e){}}};
 	  /* 给所有按钮加统一的轻点击音（选择题按钮除外，它有自己的音效） */
 	  document.addEventListener('click',e=>{
